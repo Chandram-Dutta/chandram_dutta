@@ -1,8 +1,17 @@
+import 'package:chandram_dutta/services/SendMail.dart';
 import 'package:chandram_dutta/widgets/AppBarButton.dart';
-import 'package:chandram_dutta/widgets/UrlLauncher.dart';
+import 'package:chandram_dutta/services/UrlLauncher.dart';
 import 'package:flutter/material.dart';
 
 var appBarDesktopButtonsWidgets = <Widget>[
+  AppBarDesktopButton(
+    color: Colors.orange,
+    title: "Mail",
+    function: () {
+      sendMail();
+    },
+    icon: "assets/icons/email.png",
+  ),
   AppBarDesktopButton(
     color: Color.fromRGBO(206, 62, 122, 1),
     title: "Instagram",
@@ -30,6 +39,14 @@ var appBarDesktopButtonsWidgets = <Widget>[
 ];
 
 var appBarMobileButtonsWidgets = <Widget>[
+  AppBarMobileButton(
+    color: Colors.white,
+    title: "Mail",
+    function: () {
+      sendMail();
+    },
+    icon: "assets/icons/email.png",
+  ),
   AppBarMobileButton(
     color: Color.fromRGBO(206, 62, 122, 1),
     title: "Instagram",

@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:chandram_dutta/responsive/responsive.dart';
+import 'package:chandram_dutta/widgets/Avatar.dart';
 import 'package:chandram_dutta/widgets/MobileNavBar.dart';
 import 'package:flutter/material.dart';
 
@@ -16,6 +17,7 @@ class HomePageContainer extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           MobileNavBar(),
+          Avatar(),
           Container(
             width: MediaQuery.of(context).size.width,
             decoration: BoxDecoration(
@@ -36,11 +38,21 @@ class HomePageContainer extends StatelessWidget {
               children: [
                 SizedBox(height: 20),
                 Text(
-                  "Chandram Dutta",
+                  "Hello!!! I am",
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: isDesktop(context) ? 100 : 50,
                   ),
+                  textAlign: TextAlign.center,
+                ),
+                Text(
+                  "Chandram Dutta",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: isDesktop(context) ? 100 : 50,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  textAlign: TextAlign.center,
                 ),
               ],
             ),

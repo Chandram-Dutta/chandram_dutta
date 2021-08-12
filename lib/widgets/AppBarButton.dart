@@ -2,7 +2,6 @@ import 'package:chandram_dutta/responsive/responsive.dart';
 import 'package:flutter/material.dart';
 
 class AppBarDesktopButton extends StatelessWidget {
-  
   const AppBarDesktopButton({
     Key? key,
     this.title,
@@ -15,9 +14,6 @@ class AppBarDesktopButton extends StatelessWidget {
   final function;
   final String? icon;
   final Color? color;
-  
-
- 
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +34,11 @@ class AppBarDesktopButton extends StatelessWidget {
                   SizedBox(width: 5),
                   Text(
                     title.toString(),
-                    style: TextStyle(),
+                    style: TextStyle(
+                      color: ("GitHub" == title.toString())
+                          ? Colors.black
+                          : Colors.white,
+                    ),
                   ),
                 ],
               )),
