@@ -2,6 +2,7 @@ import 'package:chandram_dutta/responsive/responsive.dart';
 import 'package:flutter/material.dart';
 
 class AppBarDesktopButton extends StatelessWidget {
+  
   const AppBarDesktopButton({
     Key? key,
     this.title,
@@ -12,8 +13,11 @@ class AppBarDesktopButton extends StatelessWidget {
 
   final String? title;
   final function;
-  final IconData? icon;
+  final String? icon;
   final Color? color;
+  
+
+ 
 
   @override
   Widget build(BuildContext context) {
@@ -30,9 +34,12 @@ class AppBarDesktopButton extends StatelessWidget {
               onPressed: function,
               child: Row(
                 children: [
-                  Icon(icon),
-                  SizedBox(width: 2),
-                  Text(title.toString()),
+                  Image.asset(icon.toString()),
+                  SizedBox(width: 5),
+                  Text(
+                    title.toString(),
+                    style: TextStyle(),
+                  ),
                 ],
               )),
         ),
@@ -52,7 +59,7 @@ class AppBarMobileButton extends StatelessWidget {
 
   final String? title;
   final function;
-  final IconData? icon;
+  final String? icon;
 
   final Color? color;
 
@@ -65,7 +72,7 @@ class AppBarMobileButton extends StatelessWidget {
         color: color!,
         tooltip: title,
         onPressed: function,
-        icon: Icon(icon),
+        icon: Image.asset(icon.toString()),
       ),
     );
   }

@@ -1,5 +1,6 @@
 import 'package:chandram_dutta/responsive/responsive.dart';
 import 'package:chandram_dutta/widgets/AppBarButtonWidgets.dart';
+import 'package:chandram_dutta/widgets/HomePageContainer.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -21,7 +22,7 @@ class HomePage extends StatelessWidget {
         ),
         actions: isDesktop(context) ? appBarDesktopButtonsWidgets : null,
       ),
-      body: null,
+      body: HomePageContainer(),
     );
   }
 }

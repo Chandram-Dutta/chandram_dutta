@@ -9,7 +9,7 @@ var appBarDesktopButtonsWidgets = <Widget>[
     function: () {
       launchUrl("https://instagram.com/chandram_dutta");
     },
-    icon: Icons.info_outline_rounded,
+    icon: "assets/icons/instagram-logo.png",
   ),
   AppBarDesktopButton(
     color: Color.fromRGBO(93, 169, 221, 1),
@@ -17,7 +17,15 @@ var appBarDesktopButtonsWidgets = <Widget>[
     function: () {
       launchUrl("https://twitter.com/ChandramDutta");
     },
-    icon: Icons.info_outline_rounded,
+    icon: "assets/icons/twitter.png",
+  ),
+  AppBarDesktopButton(
+    color: Colors.white,
+    title: "GitHub",
+    function: () {
+      launchUrl("https://github.com/Chandram-Dutta");
+    },
+    icon: "assets/icons/github.png",
   ),
 ];
 
@@ -28,7 +36,7 @@ var appBarMobileButtonsWidgets = <Widget>[
     function: () {
       launchUrl("https://instagram.com/chandram_dutta");
     },
-    icon: Icons.info_outline_rounded,
+    icon: "assets/icons/instagram-logo.png",
   ),
   AppBarMobileButton(
     color: Color.fromRGBO(93, 169, 221, 1),
@@ -36,6 +44,14 @@ var appBarMobileButtonsWidgets = <Widget>[
     function: () {
       launchUrl("https://twitter.com/ChandramDutta");
     },
-    icon: Icons.info_outline_rounded,
+    icon: "assets/icons/twitter.png",
+  ),
+  AppBarMobileButton(
+    color: Colors.black,
+    title: "GitHub",
+    function: () {
+      launchUrl("https://github.com/Chandram-Dutta");
+    },
+    icon: "assets/icons/github.png",
   ),
 ];
