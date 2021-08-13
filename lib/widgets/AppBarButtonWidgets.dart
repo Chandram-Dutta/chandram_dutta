@@ -29,7 +29,7 @@ var appBarDesktopButtonsWidgets = <Widget>[
     icon: "assets/icons/twitter.png",
   ),
   AppBarDesktopButton(
-    color: Colors.white,
+    color: Colors.grey[300],
     title: "GitHub",
     function: () {
       launchUrl("https://github.com/Chandram-Dutta");
