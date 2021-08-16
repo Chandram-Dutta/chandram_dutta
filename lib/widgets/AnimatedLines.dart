@@ -20,12 +20,10 @@ class AnimatedLines extends StatelessWidget {
                   fontSize: isDesktop(context) ? 100 : 50, color: Colors.white),
               textAlign: TextAlign.center,
               speed: Duration(milliseconds: 200)),
-          ColorizeAnimatedText(
+          ScaleAnimatedText(
             'Designer',
-            colors: colorizeColors,
             textStyle: GoogleFonts.luckiestGuy(
-              fontSize: isDesktop(context) ? 100 : 50,
-            ),
+                fontSize: isDesktop(context) ? 100 : 50, color: Colors.white),
             textAlign: TextAlign.center,
           ),
           RotateAnimatedText(
