@@ -14,6 +14,7 @@ class AnimatedLines extends StatelessWidget {
       height: 150,
       width: MediaQuery.of(context).size.width,
       child: AnimatedTextKit(
+        repeatForever: true,
         animatedTexts: [
           TypewriterAnimatedText('Coder',
               textStyle: GoogleFonts.nanumGothicCoding(
