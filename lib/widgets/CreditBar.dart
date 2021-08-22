@@ -27,32 +27,54 @@ class DesktopCreditBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
+      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+      child: Column(
         children: [
-          Text(
-            "This website is developed and maintained by \nChandram Dutta",
-            style: TextStyle(
-              color: Colors.white,
-            ),
-          ),
-          Spacer(),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(
-                "Made with 💙 with",
+                "This website is developed and maintained by \nChandram Dutta",
                 style: TextStyle(
                   color: Colors.white,
                 ),
               ),
-              FlutterLogo(
-                size: 128,
-              ),
+              Spacer(),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "Made with 💙 with",
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                  ),
+                  FlutterLogo(
+                    size: 128,
+                  ),
+                ],
+              )
             ],
-          )
+          ),
+          CreditBarButton()
         ],
+      ),
+    );
+  }
+}
+
+class CreditBarButton extends StatelessWidget {
+  const CreditBarButton({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: () {},
+      child: Text("Report Bug / Licenses / Source Code"),
+      style: ButtonStyle(
+        backgroundColor: MaterialStateProperty.all(Colors.red[900]),
       ),
     );
   }
@@ -81,7 +103,6 @@ class MobileCreditBar extends StatelessWidget {
             height: 20,
           ),
           Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 "Made with 💙 using",
@@ -93,7 +114,11 @@ class MobileCreditBar extends StatelessWidget {
                 size: 128,
               ),
             ],
-          )
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          CreditBarButton()
         ],
       ),
     );
