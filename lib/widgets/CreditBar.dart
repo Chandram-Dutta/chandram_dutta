@@ -1,4 +1,8 @@
+import 'package:chandram_dutta/licenseconst.dart';
 import 'package:chandram_dutta/responsive/responsive.dart';
+import 'package:chandram_dutta/services/SendMail.dart';
+import 'package:chandram_dutta/services/UrlLauncher.dart';
+import 'package:chandram_dutta/widgets/Avatar.dart';
 import 'package:flutter/material.dart';
 
 class CreditBar extends StatelessWidget {
@@ -40,20 +44,7 @@ class DesktopCreditBar extends StatelessWidget {
                 ),
               ),
               Spacer(),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    "Made with 💙 with",
-                    style: TextStyle(
-                      color: Colors.white,
-                    ),
-                  ),
-                  FlutterLogo(
-                    size: 128,
-                  ),
-                ],
-              )
+              MadeWithFlutter(),
             ],
           ),
           CreditBarButton()
@@ -71,7 +62,30 @@ class CreditBarButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: () {},
+      onPressed: () {
+        showAboutDialog(
+          context: context,
+          applicationIcon: CircleAvatar(
+            backgroundImage: AssetImage("assets/ChandramPhoto.jpg"),
+            radius: 48,
+          ),
+          applicationName: "Chandram Dutta",
+          applicationLegalese: mitLicense,
+          children: [
+            TextButton(
+              onPressed: () {
+                launchUrl("https://github.com/Chandram-Dutta/chandram_dutta");
+              },
+              child: Text("Source Code @ GitHub"),
+            ),
+            TextButton(
+                onPressed: () {
+                  sendMail();
+                },
+                child: Text("Report Bug Or Request Feature")),
+          ],
+        );
+      },
       child: Text("Report Bug / Licenses / Source Code"),
       style: ButtonStyle(
         backgroundColor: MaterialStateProperty.all(Colors.red[900]),
@@ -102,25 +116,36 @@ class MobileCreditBar extends StatelessWidget {
           SizedBox(
             height: 20,
           ),
-          Column(
-            children: [
-              Text(
-                "Made with 💙 using",
-                style: TextStyle(
-                  color: Colors.white,
-                ),
-              ),
-              FlutterLogo(
-                size: 128,
-              ),
-            ],
-          ),
+          MadeWithFlutter(),
           SizedBox(
             height: 20,
           ),
           CreditBarButton()
         ],
       ),
+    );
+  }
+}
+
+class MadeWithFlutter extends StatelessWidget {
+  const MadeWithFlutter({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Text(
+          "Made with 💙 using",
+          style: TextStyle(
+            color: Colors.white,
+          ),
+        ),
+        FlutterLogo(
+          size: 128,
+        ),
+      ],
     );
   }
 }
