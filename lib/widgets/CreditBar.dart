@@ -2,7 +2,6 @@ import 'package:chandram_dutta/licenseconst.dart';
 import 'package:chandram_dutta/responsive/responsive.dart';
 import 'package:chandram_dutta/services/SendMail.dart';
 import 'package:chandram_dutta/services/UrlLauncher.dart';
-import 'package:chandram_dutta/widgets/Avatar.dart';
 import 'package:flutter/material.dart';
 
 class CreditBar extends StatelessWidget {
