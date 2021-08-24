@@ -11,7 +11,7 @@ class AnimatedLines extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 150,
+      height: 200,
       width: MediaQuery.of(context).size.width,
       child: AnimatedTextKit(
         repeatForever: true,
@@ -21,18 +21,17 @@ class AnimatedLines extends StatelessWidget {
                   fontSize: isDesktop(context) ? 100 : 50, color: Colors.white),
               textAlign: TextAlign.center,
               speed: Duration(milliseconds: 200)),
-          ScaleAnimatedText(
-            'Designer',
-            textStyle: GoogleFonts.luckiestGuy(
-                fontSize: isDesktop(context) ? 100 : 50, color: Colors.white),
-            textAlign: TextAlign.center,
-          ),
+          ScaleAnimatedText('Designer',
+              textStyle: GoogleFonts.luckiestGuy(
+                  fontSize: isDesktop(context) ? 100 : 50, color: Colors.white),
+              textAlign: TextAlign.center,
+              duration: Duration(milliseconds: 3000)),
           RotateAnimatedText(
             '&',
             textStyle: TextStyle(
                 fontSize: isDesktop(context) ? 100 : 50, color: Colors.white),
             textAlign: TextAlign.center,
-            rotateOut: false,
+            rotateOut: true,
           ),
           WavyAnimatedText(
             "More!!!",
