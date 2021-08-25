@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:rive/rive.dart';
 
-class FlutterRiveAnimation extends StatelessWidget {
-  const FlutterRiveAnimation({
+const riveFile = "assets/truck.riv";
+
+class FirebaseRiveAnimation extends StatelessWidget {
+  const FirebaseRiveAnimation({
     Key? key,
   }) : super(key: key);
 
@@ -11,7 +13,7 @@ class FlutterRiveAnimation extends StatelessWidget {
     return Column(
       children: [
         Text(
-          "Building Multiplatform Opensource Apps Using",
+          "Backend Services By",
           style: TextStyle(
             color: Colors.white,
             fontSize: 18,
@@ -20,7 +22,7 @@ class FlutterRiveAnimation extends StatelessWidget {
         SizedBox(
             height: 250,
             width: 250,
-            child: RiveAnimation.asset('assets/rive/flutter.riv')),
+            child: RiveAnimation.asset('assets/rive/firebase.riv')),
       ],
     );
   }

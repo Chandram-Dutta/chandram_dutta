@@ -4,6 +4,7 @@ import 'package:chandram_dutta/responsive/responsive.dart';
 import 'package:chandram_dutta/widgets/AnimatedLines.dart';
 import 'package:chandram_dutta/widgets/Avatar.dart';
 import 'package:chandram_dutta/widgets/CreditBar.dart';
+import 'package:chandram_dutta/widgets/FirebaseRiveAnimation.dart';
 import 'package:chandram_dutta/widgets/FlutterRiveAnimation.dart';
 import 'package:chandram_dutta/widgets/MobileNavBar.dart';
 import 'package:flutter/material.dart';
@@ -72,6 +73,8 @@ class HomePageContainer extends StatelessWidget {
                 AnimatedLines(),
                 SizedBox(height: 50),
                 FlutterRiveAnimation(),
+                SizedBox(height: 50),
+                FirebaseRiveAnimation(),
                 CreditBar()
               ],
             ),
