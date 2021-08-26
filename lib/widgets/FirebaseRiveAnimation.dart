@@ -20,8 +20,8 @@ class FirebaseRiveAnimation extends StatelessWidget {
           ),
         ),
         SizedBox(
-            height: 250,
-            width: 250,
+            height: 300,
+            width: 300,
             child: RiveAnimation.asset('assets/rive/firebase.riv')),
       ],
     );
