@@ -12,6 +12,7 @@ class FlutterRiveAnimation extends StatelessWidget {
       children: [
         Text(
           "Building Multiplatform Opensource Apps Using",
+          textAlign: TextAlign.center,
           style: TextStyle(
             color: Colors.white,
             fontSize: 18,

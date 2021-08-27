@@ -72,15 +72,40 @@ class HomePageContainer extends StatelessWidget {
                 SizedBox(height: 50),
                 AnimatedLines(),
                 SizedBox(height: 50),
-                FlutterRiveAnimation(),
-                SizedBox(height: 50),
-                FirebaseRiveAnimation(),
+                RiveAnimations(),
                 CreditBar()
               ],
             ),
           ),
         ],
       ),
+    );
+  }
+}
+
+class RiveAnimations extends StatelessWidget {
+  const RiveAnimations({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    var animations = [
+      FlutterRiveAnimation(),
+      SizedBox(height: 50),
+      FirebaseRiveAnimation(),
+    ];
+
+    return Container(
+      child: isDesktop(context)
+          ? Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: animations,
+            )
+          : Column(
+              children: animations,
+            ),
     );
   }
 }

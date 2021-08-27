@@ -13,7 +13,7 @@ class FirebaseRiveAnimation extends StatelessWidget {
     return Column(
       children: [
         Text(
-          "Backend Services By",
+          "Backend & Hosting Services By",
           style: TextStyle(
             color: Colors.white,
             fontSize: 18,
