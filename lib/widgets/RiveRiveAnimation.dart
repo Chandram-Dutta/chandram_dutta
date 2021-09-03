@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:rive/rive.dart';
 
-class FirebaseRiveAnimation extends StatelessWidget {
-  const FirebaseRiveAnimation({
+class RiveRiveAnimation extends StatelessWidget {
+  const RiveRiveAnimation({
     Key? key,
   }) : super(key: key);
 
@@ -11,7 +11,7 @@ class FirebaseRiveAnimation extends StatelessWidget {
     return Column(
       children: [
         Text(
-          "Backend & Hosting Services By",
+          "Animations By",
           style: TextStyle(
             color: Colors.white,
             fontSize: 18,
@@ -20,7 +20,7 @@ class FirebaseRiveAnimation extends StatelessWidget {
         SizedBox(
             height: 300,
             width: 300,
-            child: RiveAnimation.asset('assets/rive/firebase.riv')),
+            child: RiveAnimation.asset('assets/rive/rive.riv')),
       ],
     );
   }

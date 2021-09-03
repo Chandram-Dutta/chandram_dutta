@@ -4,9 +4,9 @@ import 'package:chandram_dutta/responsive/responsive.dart';
 import 'package:chandram_dutta/widgets/AnimatedLines.dart';
 import 'package:chandram_dutta/widgets/Avatar.dart';
 import 'package:chandram_dutta/widgets/CreditBar.dart';
-import 'package:chandram_dutta/widgets/FirebaseRiveAnimation.dart';
-import 'package:chandram_dutta/widgets/FlutterRiveAnimation.dart';
 import 'package:chandram_dutta/widgets/MobileNavBar.dart';
+import 'package:chandram_dutta/widgets/MyProjects.dart';
+import 'package:chandram_dutta/widgets/RiveAnimations.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -73,39 +73,13 @@ class HomePageContainer extends StatelessWidget {
                 AnimatedLines(),
                 SizedBox(height: 50),
                 RiveAnimations(),
+                MyProjects(),
                 CreditBar()
               ],
             ),
           ),
         ],
       ),
-    );
-  }
-}
-
-class RiveAnimations extends StatelessWidget {
-  const RiveAnimations({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    var animations = [
-      FlutterRiveAnimation(),
-      SizedBox(height: 50),
-      FirebaseRiveAnimation(),
-    ];
-
-    return Container(
-      child: isDesktop(context)
-          ? Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: animations,
-            )
-          : Column(
-              children: animations,
-            ),
     );
   }
 }
