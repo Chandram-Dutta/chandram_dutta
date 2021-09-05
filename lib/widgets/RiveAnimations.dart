@@ -1,4 +1,3 @@
-import 'package:chandram_dutta/responsive/responsive.dart';
 import 'package:chandram_dutta/widgets/FirebaseRiveAnimation.dart';
 import 'package:chandram_dutta/widgets/FlutterRiveAnimation.dart';
 import 'package:chandram_dutta/widgets/RiveRiveAnimation.dart';
