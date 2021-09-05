@@ -20,15 +20,10 @@ class RiveAnimations extends StatelessWidget {
     ];
 
     return Container(
-      child: isDesktop(context)
-          ? Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: animations,
-            )
-          : Column(
-              children: animations,
-            ),
-    );
+        child: Wrap(
+      children: animations,
+      spacing: 20,
+      alignment: WrapAlignment.center,
+    ));
   }
 }
