@@ -16,7 +16,7 @@ var appBarDesktopButtonsWidgets = <Widget>[
     color: Color.fromRGBO(206, 62, 122, 1),
     title: "Instagram",
     function: () {
-      launchUrl("https://instagram.com/chandram_dutta");
+      launchUrl("https://instagram.com/chandram_codes");
     },
     icon: "assets/icons/instagram-logo.png",
   ),
