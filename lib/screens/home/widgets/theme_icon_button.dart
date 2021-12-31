@@ -23,11 +23,13 @@ class _ThemeIconButtonState extends ConsumerState<ThemeIconButton> {
             setState(() {
               ref.read(themeIconProvider.state).state = CupertinoIcons.moon;
               ref.read(themeProvider.state).state = darkTheme;
+              ref.read(isDarkThemeProvider.state).state = true;
             });
           } else {
             setState(() {
               ref.read(themeIconProvider.state).state = CupertinoIcons.sun_max;
               ref.read(themeProvider.state).state = lightTheme;
+              ref.read(isDarkThemeProvider.state).state = false;
             });
           }
         },

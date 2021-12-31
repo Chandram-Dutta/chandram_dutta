@@ -26,9 +26,10 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
+  flutter_riverpod: null
+  flutter_svg: ^1.0.0
   google_fonts: ^2.1.0
   rive: ^0.7.28
-  flutter_riverpod: 
   url_launcher: ^6.0.9
 
 dev_dependencies:
@@ -58,6 +59,9 @@ flutter:
     - assets/myprojects/CalcX.png
     - assets/myprojects/debconf.png
     - assets/FlutterZed.png
+    - assets/background.jpeg
+    - assets/riverpod.png
+    - assets/riverpod.svg
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

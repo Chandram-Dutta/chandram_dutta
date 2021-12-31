@@ -29,7 +29,7 @@ final themeIconProvider = StateProvider<IconData>((ref) {
   }
 });
 
-final isDarkThemeProvider = Provider<bool>((ref) {
+final isDarkThemeProvider = StateProvider<bool>((ref) {
   var brightness = SchedulerBinding.instance!.window.platformBrightness;
   if (brightness == Brightness.dark) {
     return true;
