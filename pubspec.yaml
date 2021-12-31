@@ -57,6 +57,7 @@ flutter:
     - assets/myprojects/Translator.png
     - assets/myprojects/CalcX.png
     - assets/myprojects/debconf.png
+    - assets/FlutterZed.png
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

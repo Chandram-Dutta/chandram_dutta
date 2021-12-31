@@ -5,8 +5,8 @@ ThemeData darkTheme = ThemeData(
   scaffoldBackgroundColor: Colors.black,
   colorScheme: ColorScheme.dark().copyWith(
     primary: Colors.blue[500],
-    secondary: Colors.black,
-    secondaryVariant: Colors.white,
+    secondary: Colors.white,
+    secondaryVariant: Colors.black,
   ),
   textTheme: TextTheme(
     headline1: GoogleFonts.montserrat(),
