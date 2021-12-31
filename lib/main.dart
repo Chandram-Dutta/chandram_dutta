@@ -1,9 +1,9 @@
-import 'package:chandram_dutta/screens/HomePage.dart';
+import 'package:chandram_dutta/responsive/screens/home/home.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -12,14 +12,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Chandram Dutta',
-      theme: ThemeData(
-        textTheme: GoogleFonts.montserratTextTheme(
-          Theme.of(context).textTheme,
-        ),
-        scaffoldBackgroundColor: Colors.white,
-        primaryColor: Colors.black,
-        accentColor: Colors.black,
-      ),
       home: HomePage(),
     );
   }
