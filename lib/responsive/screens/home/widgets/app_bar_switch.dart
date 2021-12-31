@@ -1,5 +1,6 @@
 import 'package:chandram_dutta/providers/appbar_providers.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class AppBarSwitch extends ConsumerStatefulWidget {
@@ -15,6 +16,8 @@ class _AppBarSwitchState extends ConsumerState<AppBarSwitch> {
   @override
   Widget build(BuildContext context) {
     return CupertinoSwitch(
+      trackColor: Theme.of(context).colorScheme.secondary,
+      thumbColor: Theme.of(context).colorScheme.secondaryVariant,
       value: ref.watch(appBarSwitchProvider),
       onChanged: (bool value) {
         setState(() {
