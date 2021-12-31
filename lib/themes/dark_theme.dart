@@ -2,11 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 ThemeData darkTheme = ThemeData(
-  appBarTheme: AppBarTheme(
-    backgroundColor: Colors.blue[500],
-    foregroundColor: Colors.black,
-    elevation: 0,
-  ),
+  scaffoldBackgroundColor: Colors.black,
   colorScheme: ColorScheme.dark().copyWith(
     primary: Colors.blue[500],
     secondary: Colors.black,

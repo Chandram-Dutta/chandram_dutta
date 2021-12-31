@@ -1,5 +1,6 @@
+import 'package:chandram_dutta/providers/misc_provider.dart';
 import 'package:chandram_dutta/providers/theme_provider.dart';
-import 'package:chandram_dutta/responsive/screens/home/home.dart';
+import 'package:chandram_dutta/screens/home/home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -13,7 +14,7 @@ class MyApp extends ConsumerWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ref.watch(themeProvider),
-      title: 'Chandram Dutta',
+      title: ref.watch(isChandramProvider) ? 'Chandram Dutta' : 'Flutter Zed',
       home: HomePage(),
     );
   }

@@ -1,4 +1,5 @@
 import 'package:chandram_dutta/providers/appbar_providers.dart';
+import 'package:chandram_dutta/providers/misc_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -23,8 +24,10 @@ class _AppBarSwitchState extends ConsumerState<AppBarSwitch> {
         setState(() {
           if (ref.watch(appBarSwitchProvider)) {
             ref.read(appBarSwitchProvider.state).state = false;
+            ref.read(isChandramProvider.state).state = true;
           } else if (!ref.watch(appBarSwitchProvider)) {
             ref.read(appBarSwitchProvider.state).state = true;
+            ref.read(isChandramProvider.state).state = false;
           }
         });
       },

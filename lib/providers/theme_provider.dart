@@ -28,3 +28,14 @@ final themeIconProvider = StateProvider<IconData>((ref) {
     return CupertinoIcons.sun_max;
   }
 });
+
+final isDarkThemeProvider = Provider<bool>((ref) {
+  var brightness = SchedulerBinding.instance!.window.platformBrightness;
+  if (brightness == Brightness.dark) {
+    return true;
+  } else if (brightness == Brightness.light) {
+    return false;
+  } else {
+    return false;
+  }
+});
