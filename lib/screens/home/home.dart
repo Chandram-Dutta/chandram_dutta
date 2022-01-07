@@ -1,4 +1,5 @@
 import 'package:chandram_dutta/providers/misc_provider.dart';
+import 'package:chandram_dutta/responsive/responsive.dart';
 import 'package:chandram_dutta/screens/home/widgets/appbar.dart';
 import 'package:chandram_dutta/screens/home/widgets/body.dart';
 import 'package:chandram_dutta/screens/home/widgets/drawer.dart';
@@ -14,13 +15,14 @@ class HomePage extends ConsumerWidget {
     return Scaffold(
         drawer: HomePageDrawer(),
         appBar: AppBar(
+          toolbarHeight: isDesktop(context, 500) ? 50 : 95,
+          title: AppBarTitle(),
           centerTitle: true,
           backgroundColor: ref.watch(isChandramProvider)
               ? Colors.blue[500]
               : Colors.red[900],
           elevation: 0,
           actions: [ThemeIconButton()],
-          title: AppBarTitle(),
         ),
         body: Body());
   }
