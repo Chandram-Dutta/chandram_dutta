@@ -23,22 +23,30 @@ class HomePageDrawer extends StatelessWidget {
                 child: Text("Menu", style: TextStyle(fontSize: 25))),
             ListTile(
               title: const Text('Skills'),
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, '/skills');
+              },
               trailing: Icon(Icons.arrow_forward_ios_sharp),
             ),
             ListTile(
               title: const Text('Blog'),
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, '/blogs');
+              },
               trailing: Icon(Icons.arrow_forward_ios_sharp),
             ),
             ListTile(
               title: const Text('Social'),
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, '/socials');
+              },
               trailing: Icon(Icons.arrow_forward_ios_sharp),
             ),
             ListTile(
               title: const Text('Projects & Works'),
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, '/projects');
+              },
               trailing: Icon(Icons.arrow_forward_ios_sharp),
             ),
           ],

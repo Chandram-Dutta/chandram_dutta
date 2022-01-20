@@ -11,7 +11,7 @@ class Footer extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return SizedBox(
-      height: 200,
+      height: 100,
       width: MediaQuery.of(context).size.width,
       child: Container(
         color: ref.watch(isDarkThemeProvider)
