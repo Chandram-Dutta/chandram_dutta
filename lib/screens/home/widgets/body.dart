@@ -58,7 +58,6 @@ class Body extends ConsumerWidget {
                       )),
           ),
           Texts(),
-          Footer()
         ],
       ),
     );
