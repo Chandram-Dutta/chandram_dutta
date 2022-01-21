@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:chandram_dutta/themes/dark_theme.dart';
 import 'package:chandram_dutta/themes/light_theme.dart';
 import 'package:flutter/cupertino.dart';

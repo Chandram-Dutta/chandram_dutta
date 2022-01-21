@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:chandram_dutta/providers/appbar_providers.dart';
 import 'package:chandram_dutta/providers/misc_provider.dart';
 import 'package:flutter/cupertino.dart';

@@ -1,7 +1,6 @@
 import 'package:chandram_dutta/providers/misc_provider.dart';
 import 'package:chandram_dutta/responsive/responsive.dart';
 import 'package:chandram_dutta/screens/home/widgets/avatar.dart';
-import 'package:chandram_dutta/screens/home/widgets/footer.dart';
 import 'package:chandram_dutta/screens/home/widgets/texts.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
