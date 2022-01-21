@@ -30,7 +30,7 @@ class Body extends ConsumerWidget {
           : SizedBox(
               height: 100,
             )
-    ];
+    ]; 
 
     return SingleChildScrollView(
       child: Column(
