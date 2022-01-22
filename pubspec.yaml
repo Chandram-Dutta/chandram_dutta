@@ -27,6 +27,7 @@ dependencies:
     sdk: flutter
   flutter_riverpod: null
   flutter_svg: ^1.0.0
+  font_awesome_flutter: ^9.2.0
   google_fonts: ^2.1.0
   neumorphic_container: ^0.0.1+2
   rive: ^0.7.28
@@ -47,21 +48,14 @@ flutter:
   uses-material-design: true
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/icons/instagram-logo.png
-    - assets/icons/twitter.png
-    - assets/icons/github.png
-    - assets/icons/email.png
     - assets/ChandramPhoto.jpg
-    - assets/rive/flutter.riv
-    - assets/rive/firebase.riv
-    - assets/rive/rive.riv
     - assets/myprojects/Translator.png
     - assets/myprojects/CalcX.png
     - assets/myprojects/debconf.png
     - assets/FlutterZed.png
     - assets/background.jpeg
-    - assets/riverpod.png
     - assets/riverpod.svg
+    - assets/icons/firebase.svg
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
