@@ -1,6 +1,9 @@
 // ignore_for_file: import_of_legacy_library_into_null_safe
+import 'package:chandram_dutta/screens/skills/widgets/neu_logo_containers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:neumorphic_container/neumorphic_container.dart';
 
 import '../../../providers/theme_provider.dart';
@@ -15,7 +18,6 @@ class SkillsLearning extends ConsumerWidget {
     return NeumorphicContainer(
       depth: 100,
       spread: 1,
-      height: 130,
       borderRadius: 10,
       // borderColor: Colors.red,
       width: MediaQuery.of(context).size.width - 20,
@@ -29,7 +31,62 @@ class SkillsLearning extends ConsumerWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("Skills Learning"),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                "Skills Learning",
+                style: TextStyle(fontSize: 20),
+              ),
+            ),
+            Wrap(children: [
+              NeuLogoContainers(
+                widget: FaIcon(
+                  FontAwesomeIcons.swift,
+                  size: 70,
+                  color: Color.fromARGB(255, 255, 72, 0),
+                ),
+              ),
+              NeuLogoContainers(
+                widget: FaIcon(
+                  FontAwesomeIcons.ethereum,
+                  size: 60,
+                ),
+              ),
+              NeuLogoContainers(
+                widget: SizedBox(
+                  height: 70,
+                  width: 70,
+                  child: SvgPicture.asset(
+                    "assets/icons/solidity.svg",
+                    color: ref.watch(isDarkThemeProvider)
+                        ? Colors.white
+                        : Colors.black,
+                  ),
+                ),
+              ),
+              NeuLogoContainers(
+                widget: SizedBox(
+                  height: 70,
+                  width: 70,
+                  child: SvgPicture.asset(
+                    "assets/icons/metamask.svg",
+                    color: ref.watch(isDarkThemeProvider)
+                        ? Colors.white
+                        : Colors.black,
+                  ),
+                ),
+              ),
+              NeuLogoContainers(
+                widget: SizedBox(
+                  height: 60,
+                  width: 60,
+                  child: SvgPicture.asset(
+                    "assets/icons/alchemy.svg",
+                    color: Color.fromARGB(255, 25, 0, 255),
+                  ),
+                ),
+              ),
+            ])
           ],
         ),
       ),

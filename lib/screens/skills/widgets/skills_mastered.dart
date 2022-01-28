@@ -31,10 +31,60 @@ class SkillsMastered extends ConsumerWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("Skills Mastered"),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                "Skills Mastered",
+                style: TextStyle(fontSize: 20),
+              ),
+            ),
             Wrap(children: [
               NeuLogoContainers(
                 widget: FlutterLogo(
+                  size: 70,
+                ),
+              ),
+              NeuLogoContainers(
+                widget: SizedBox(
+                  height: 70,
+                  width: 70,
+                  child: SvgPicture.asset("assets/icons/dart.svg"),
+                ),
+              ),
+              NeuLogoContainers(
+                widget: SizedBox(
+                  height: 70,
+                  width: 70,
+                  child: SvgPicture.asset("assets/icons/firebase.svg"),
+                ),
+              ),
+              NeuLogoContainers(
+                widget: FaIcon(
+                  FontAwesomeIcons.linux,
+                  size: 70,
+                ),
+              ),
+              NeuLogoContainers(
+                widget: FaIcon(
+                  FontAwesomeIcons.terminal,
+                  size: 50,
+                ),
+              ),
+              NeuLogoContainers(
+                widget: FaIcon(
+                  FontAwesomeIcons.windows,
+                  size: 70,
+                ),
+              ),
+              NeuLogoContainers(
+                widget: FaIcon(
+                  FontAwesomeIcons.java,
+                  size: 70,
+                ),
+              ),
+              NeuLogoContainers(
+                widget: FaIcon(
+                  FontAwesomeIcons.python,
                   size: 70,
                 ),
               ),
@@ -45,8 +95,27 @@ class SkillsMastered extends ConsumerWidget {
                 ),
               ),
               NeuLogoContainers(
-                widget: SvgPicture.asset("assets/icons/firebase.svg"),
-              )
+                widget: FaIcon(
+                  FontAwesomeIcons.gitAlt,
+                  size: 70,
+                ),
+              ),
+              NeuLogoContainers(
+                widget: SizedBox(
+                  height: 60,
+                  width: 60,
+                  child: SvgPicture.asset("assets/icons/vscode.svg"),
+                ),
+              ),
+              NeuLogoContainers(
+                widget: SizedBox(
+                  height: 70,
+                  width: 70,
+                  child: SvgPicture.asset(
+                    "assets/icons/jetbrainsBox.svg",
+                  ),
+                ),
+              ),
             ])
           ],
         ),

@@ -56,6 +56,14 @@ flutter:
     - assets/background.jpeg
     - assets/riverpod.svg
     - assets/icons/firebase.svg
+    - assets/icons/vscode.svg
+    - assets/icons/jetbrains.svg
+    - assets/icons/jetbrainsBox.svg
+    - assets/icons/dart.svg
+    - assets/icons/solidity.svg
+    - assets/icons/solana.svg
+    - assets/icons/metamask.svg
+    - assets/icons/alchemy.svg
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

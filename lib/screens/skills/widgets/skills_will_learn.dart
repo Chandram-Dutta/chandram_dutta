@@ -1,6 +1,9 @@
 // ignore_for_file: import_of_legacy_library_into_null_safe
+import 'package:chandram_dutta/screens/skills/widgets/neu_logo_containers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:neumorphic_container/neumorphic_container.dart';
 
 import '../../../providers/theme_provider.dart';
@@ -15,7 +18,6 @@ class SkillsWillLearn extends ConsumerWidget {
     return NeumorphicContainer(
       depth: 100,
       spread: 1,
-      height: 130,
       borderRadius: 10,
       // borderColor: Colors.red,
       width: MediaQuery.of(context).size.width - 20,
@@ -29,7 +31,32 @@ class SkillsWillLearn extends ConsumerWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("Skills Will Learn"),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                "Skills Will Learn",
+                style: TextStyle(fontSize: 20),
+              ),
+            ),
+            Wrap(children: [
+              NeuLogoContainers(
+                widget: FaIcon(
+                  FontAwesomeIcons.swift,
+                  size: 70,
+                  color: Color.fromARGB(255, 33, 72, 247),
+                ),
+              ),
+              NeuLogoContainers(
+                widget: SizedBox(
+                  height: 60,
+                  width: 60,
+                  child: SvgPicture.asset(
+                    "assets/icons/solana.svg",
+                    color: Color.fromARGB(255, 220, 82, 255),
+                  ),
+                ),
+              ),
+            ])
           ],
         ),
       ),
