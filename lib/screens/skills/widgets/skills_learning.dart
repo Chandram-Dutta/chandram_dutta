@@ -68,11 +68,8 @@ class SkillsLearning extends ConsumerWidget {
                 widget: SizedBox(
                   height: 70,
                   width: 70,
-                  child: SvgPicture.asset(
-                    "assets/icons/metamask.svg",
-                    color: ref.watch(isDarkThemeProvider)
-                        ? Colors.white
-                        : Colors.black,
+                  child: Image.asset(
+                    "assets/icons/metamask.png",
                   ),
                 ),
               ),
@@ -80,9 +77,8 @@ class SkillsLearning extends ConsumerWidget {
                 widget: SizedBox(
                   height: 60,
                   width: 60,
-                  child: SvgPicture.asset(
-                    "assets/icons/alchemy.svg",
-                    color: Color.fromARGB(255, 25, 0, 255),
+                  child:Image.asset(
+                    "assets/icons/alchemy.png",
                   ),
                 ),
               ),

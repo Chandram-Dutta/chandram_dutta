@@ -50,9 +50,8 @@ class SkillsWillLearn extends ConsumerWidget {
                 widget: SizedBox(
                   height: 60,
                   width: 60,
-                  child: SvgPicture.asset(
-                    "assets/icons/solana.svg",
-                    color: Color.fromARGB(255, 220, 82, 255),
+                  child: Image.asset(
+                    "assets/icons/solana.png",
                   ),
                 ),
               ),
