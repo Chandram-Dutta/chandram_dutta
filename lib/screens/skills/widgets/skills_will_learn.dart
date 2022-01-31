@@ -40,6 +40,7 @@ class SkillsWillLearn extends ConsumerWidget {
             ),
             Wrap(children: [
               NeuLogoContainers(
+                iconName: "Swift UI",
                 widget: FaIcon(
                   FontAwesomeIcons.swift,
                   size: 70,
@@ -47,6 +48,7 @@ class SkillsWillLearn extends ConsumerWidget {
                 ),
               ),
               NeuLogoContainers(
+                iconName: "Solana",
                 widget: SizedBox(
                   height: 60,
                   width: 60,

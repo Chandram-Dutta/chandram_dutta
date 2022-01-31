@@ -40,11 +40,13 @@ class SkillsMastered extends ConsumerWidget {
             ),
             Wrap(children: [
               NeuLogoContainers(
+                iconName: "Flutter",
                 widget: FlutterLogo(
                   size: 70,
                 ),
               ),
               NeuLogoContainers(
+                iconName: "Dart",
                 widget: SizedBox(
                   height: 70,
                   width: 70,
@@ -52,6 +54,7 @@ class SkillsMastered extends ConsumerWidget {
                 ),
               ),
               NeuLogoContainers(
+                iconName: "Firebase",
                 widget: SizedBox(
                   height: 70,
                   width: 70,
@@ -59,48 +62,56 @@ class SkillsMastered extends ConsumerWidget {
                 ),
               ),
               NeuLogoContainers(
+                iconName: "Linux",
                 widget: FaIcon(
                   FontAwesomeIcons.linux,
                   size: 70,
                 ),
               ),
               NeuLogoContainers(
+                iconName: "Terminal",
                 widget: FaIcon(
                   FontAwesomeIcons.terminal,
                   size: 50,
                 ),
               ),
               NeuLogoContainers(
+                iconName: "Windows",
                 widget: FaIcon(
                   FontAwesomeIcons.windows,
                   size: 70,
                 ),
               ),
               NeuLogoContainers(
+                iconName: "Java",
                 widget: FaIcon(
                   FontAwesomeIcons.java,
                   size: 70,
                 ),
               ),
               NeuLogoContainers(
+                iconName: "Python",
                 widget: FaIcon(
                   FontAwesomeIcons.python,
                   size: 70,
                 ),
               ),
               NeuLogoContainers(
+                iconName: "GitHub",
                 widget: FaIcon(
                   FontAwesomeIcons.githubSquare,
                   size: 70,
                 ),
               ),
               NeuLogoContainers(
+                iconName: "Git",
                 widget: FaIcon(
                   FontAwesomeIcons.gitAlt,
                   size: 70,
                 ),
               ),
               NeuLogoContainers(
+                iconName: "VS Code",
                 widget: SizedBox(
                   height: 60,
                   width: 60,
@@ -108,6 +119,7 @@ class SkillsMastered extends ConsumerWidget {
                 ),
               ),
               NeuLogoContainers(
+                iconName: "JetBrains Suite of IDE",
                 widget: SizedBox(
                   height: 70,
                   width: 70,

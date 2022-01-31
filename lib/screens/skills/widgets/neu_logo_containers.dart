@@ -1,3 +1,4 @@
+import 'package:chandram_dutta/providers/misc_provider.dart';
 import 'package:chandram_dutta/providers/theme_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -5,9 +6,11 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:neumorphic_container/neumorphic_container.dart';
 
 class NeuLogoContainers extends ConsumerWidget {
-  const NeuLogoContainers({Key? key, this.widget}) : super(key: key);
+  const NeuLogoContainers({Key? key, this.widget, this.iconName})
+      : super(key: key);
 
   final Widget? widget;
+  final String? iconName;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -24,7 +27,14 @@ class NeuLogoContainers extends ConsumerWidget {
             : Theme.of(context).scaffoldBackgroundColor,
         borderThickness: 1,
         curvature: Curvature.flat,
-        child: Center(child: widget),
+        child: InkWell(
+          onTap: () {
+            ref.read(iconWidgetProvider.state).state = widget;
+            ref.read(iconNameProvider.state).state = iconName.toString();
+            Navigator.pushNamed(context, "/skilldetail");
+          },
+          child: Center(child: widget),
+        ),
       ),
     );
   }

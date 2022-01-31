@@ -3,6 +3,7 @@ import 'package:chandram_dutta/providers/theme_provider.dart';
 import 'package:chandram_dutta/screens/blogs/blogs.dart';
 import 'package:chandram_dutta/screens/home/home.dart';
 import 'package:chandram_dutta/screens/projects/projects.dart';
+import 'package:chandram_dutta/screens/skills/skill_detail.dart';
 import 'package:chandram_dutta/screens/skills/skills.dart';
 import 'package:chandram_dutta/screens/socials/socials.dart';
 import 'package:flutter/material.dart';
@@ -22,6 +23,7 @@ class MyApp extends ConsumerWidget {
         '/blogs': (context) => const BlogsPage(),
         '/socials': (context) => const SocialsPage(),
         '/projects': (context) => const ProjectsPage(),
+        '/skilldetail': (context) => const SkillDetailPage(),
       },
       initialRoute: '/home',
       debugShowCheckedModeBanner: false,
