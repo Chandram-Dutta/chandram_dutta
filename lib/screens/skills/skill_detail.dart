@@ -8,8 +8,19 @@ class SkillDetailPage extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
-      appBar: AppBar(title: Text(ref.watch(iconNameProvider).toString())),
-      body: Container(child: ref.watch(iconWidgetProvider)),
+      appBar: AppBar(
+        title: Text(ref.watch(iconNameProvider).toString()),
+        centerTitle: true,
+      ),
+      body: Column(
+        children: [
+          SizedBox(
+            width: MediaQuery.of(context).size.width,
+            height: 20,
+          ),
+          Container(child: ref.watch(iconWidgetProvider)),
+        ],
+      ),
     );
   }
 }
