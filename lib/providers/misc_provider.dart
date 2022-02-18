@@ -14,6 +14,11 @@ final isChandramProvider = StateProvider<bool>((ref) {
 final iconWidgetProvider = StateProvider<Widget?>((ref) {
   return SizedBox();
 });
-final iconNameProvider =StateProvider<String?>((ref) {
+
+final iconNameProvider = StateProvider<String?>((ref) {
   return "";
+});
+
+final indexNumberProvider = StateProvider<int?>((ref) {
+  return 0;
 });

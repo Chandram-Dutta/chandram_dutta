@@ -6,11 +6,12 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:neumorphic_container/neumorphic_container.dart';
 
 class NeuLogoContainers extends ConsumerWidget {
-  const NeuLogoContainers({Key? key, this.widget, this.iconName})
+  const NeuLogoContainers({Key? key, this.widget, this.iconName, this.index})
       : super(key: key);
 
   final Widget? widget;
   final String? iconName;
+  final int? index;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -31,6 +32,7 @@ class NeuLogoContainers extends ConsumerWidget {
           onTap: () {
             ref.read(iconWidgetProvider.state).state = widget;
             ref.read(iconNameProvider.state).state = iconName.toString();
+            ref.read(indexNumberProvider.state).state = index;
             Navigator.pushNamed(context, "/skilldetail");
           },
           child: Center(child: widget),
