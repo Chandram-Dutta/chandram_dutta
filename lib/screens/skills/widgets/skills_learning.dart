@@ -41,7 +41,7 @@ class SkillsLearning extends ConsumerWidget {
             Wrap(children: [
               NeuLogoContainers(
                 iconName: "Swift",
-                index: 13,
+                index: 12,
                 widget: FaIcon(
                   FontAwesomeIcons.swift,
                   size: 70,
@@ -50,7 +50,7 @@ class SkillsLearning extends ConsumerWidget {
               ),
               NeuLogoContainers(
                 iconName: "Ethereum Blockchain",
-                index: 14,
+                index: 13,
                 widget: FaIcon(
                   FontAwesomeIcons.ethereum,
                   size: 60,
@@ -58,7 +58,7 @@ class SkillsLearning extends ConsumerWidget {
               ),
               NeuLogoContainers(
                 iconName: "Solidity",
-                index: 15,
+                index: 14,
                 widget: SizedBox(
                   height: 70,
                   width: 70,
@@ -72,7 +72,7 @@ class SkillsLearning extends ConsumerWidget {
               ),
               NeuLogoContainers(
                 iconName: "Metamask Wallet",
-                index: 16,
+                index: 15,
                 widget: SizedBox(
                   height: 70,
                   width: 70,
@@ -83,7 +83,7 @@ class SkillsLearning extends ConsumerWidget {
               ),
               NeuLogoContainers(
                 iconName: "Alchemy Platform",
-                index: 17,
+                index: 16,
                 widget: SizedBox(
                   height: 60,
                   width: 60,

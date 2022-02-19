@@ -1,3 +1,4 @@
+import 'package:chandram_dutta/constants/skills_constants.dart';
 import 'package:chandram_dutta/providers/misc_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -19,6 +20,7 @@ class SkillDetailPage extends ConsumerWidget {
             height: 20,
           ),
           Container(child: ref.watch(iconWidgetProvider)),
+          Text(skillsConstants[ref.watch(indexNumberProvider)!.toInt()]),
         ],
       ),
     );
