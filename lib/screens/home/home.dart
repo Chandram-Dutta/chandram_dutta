@@ -20,7 +20,7 @@ class HomePage extends ConsumerWidget {
           centerTitle: true,
           backgroundColor: ref.watch(isChandramProvider)
               ? Colors.blue[500]
-              : Colors.red[900],
+              : Color.fromARGB(255, 255, 17, 0),
           elevation: 0,
           actions: [ThemeIconButton()],
         ),

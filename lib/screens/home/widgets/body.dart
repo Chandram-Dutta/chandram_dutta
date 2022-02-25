@@ -2,8 +2,11 @@ import 'package:chandram_dutta/providers/misc_provider.dart';
 import 'package:chandram_dutta/responsive/responsive.dart';
 import 'package:chandram_dutta/screens/home/widgets/avatar.dart';
 import 'package:chandram_dutta/screens/home/widgets/texts.dart';
+import 'package:chandram_dutta/services/UrlLauncher.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class Body extends ConsumerWidget {
   const Body({
@@ -29,7 +32,7 @@ class Body extends ConsumerWidget {
           : SizedBox(
               height: 100,
             )
-    ]; 
+    ];
 
     return SingleChildScrollView(
       child: Column(
@@ -43,7 +46,7 @@ class Body extends ConsumerWidget {
                 decoration: BoxDecoration(
                     color: ref.watch(isChandramProvider)
                         ? Colors.blue[500]
-                        : Colors.red[900],
+                        : Color.fromARGB(255, 255, 17, 0),
                     borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(100),
                     )),
@@ -56,7 +59,88 @@ class Body extends ConsumerWidget {
                         children: bodyWidgets,
                       )),
           ),
-          Texts(),
+          ref.watch(isChandramProvider)
+              ? Texts()
+              : Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: SizedBox(
+                    height: isDesktop(context, 700)
+                        ? ref.watch(heightOfScreenProvider) * 0.2
+                        : 200,
+                    child: Row(
+                      children: [
+                        Expanded(
+                          child: SizedBox(
+                            height: MediaQuery.of(context).size.height,
+                            child: ElevatedButton(
+                              style: ButtonStyle(
+                                backgroundColor:
+                                    MaterialStateProperty.all<Color>(
+                                        Color.fromARGB(255, 255, 17, 0)),
+                                shape: MaterialStateProperty.all<
+                                    RoundedRectangleBorder>(
+                                  RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(20.0),
+                                  ),
+                                ),
+                              ),
+                              child: Row(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  FaIcon(FontAwesomeIcons.youtube),
+                                  SizedBox(width: 10),
+                                  Text(
+                                    "FlutterZed \nOn \nYoutube",
+                                  ),
+                                ],
+                              ),
+                              onPressed: () {
+                                launchUrl(
+                                    "https://www.youtube.com/channel/UCLmgkjCcj5t0QCZ9Ip-vpgw");
+                              },
+                            ),
+                          ),
+                        ),
+                        SizedBox(width: 20),
+                        Expanded(
+                          child: SizedBox(
+                            height: MediaQuery.of(context).size.height,
+                            child: ElevatedButton(
+                              style: ButtonStyle(
+                                backgroundColor:
+                                    MaterialStateProperty.all<Color>(
+                                        Color.fromARGB(255, 225, 48, 108)),
+                                shape: MaterialStateProperty.all<
+                                    RoundedRectangleBorder>(
+                                  RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(20.0),
+                                  ),
+                                ),
+                              ),
+                              child: Row(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  FaIcon(FontAwesomeIcons.instagram),
+                                  SizedBox(width: 10),
+                                  Text(
+                                    "FlutterZed \nOn \nInstagram",
+                                    
+                                  ),
+                                ],
+                              ),
+                              onPressed: () {
+                                launchUrl(
+                                    "https://www.instagram.com/flutter.zed/");
+                              },
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
         ],
       ),
     );
