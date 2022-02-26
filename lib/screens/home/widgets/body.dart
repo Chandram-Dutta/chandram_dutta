@@ -65,7 +65,7 @@ class Body extends ConsumerWidget {
                   padding: const EdgeInsets.all(20.0),
                   child: SizedBox(
                     height: isDesktop(context, 700)
-                        ? ref.watch(heightOfScreenProvider) * 0.2
+                        ? ref.watch(heightOfScreenProvider) * 0.45
                         : 200,
                     child: Row(
                       children: [
@@ -126,7 +126,6 @@ class Body extends ConsumerWidget {
                                   SizedBox(width: 10),
                                   Text(
                                     "FlutterZed \nOn \nInstagram",
-                                    
                                   ),
                                 ],
                               ),

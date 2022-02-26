@@ -15,6 +15,7 @@ class SkillsPage extends ConsumerWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("Skills"),
+        elevation: 0,
         actions: [ThemeIconButton()],
       ),
       body: SingleChildScrollView(
