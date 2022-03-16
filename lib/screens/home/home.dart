@@ -13,17 +13,18 @@ class HomePage extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
-        drawer: HomePageDrawer(),
-        appBar: AppBar(
-          toolbarHeight: isDesktop(context, 500) ? 50 : 95,
-          title: AppBarTitle(),
-          centerTitle: true,
-          backgroundColor: ref.watch(isChandramProvider)
-              ? Colors.blue[500]
-              : Color.fromARGB(255, 255, 17, 0),
-          elevation: 0,
-          actions: [ThemeIconButton()],
-        ),
-        body: Body());
+      drawer: HomePageDrawer(),
+      appBar: AppBar(
+        toolbarHeight: isDesktop(context, 500) ? 50 : 95,
+        title: AppBarTitle(),
+        centerTitle: true,
+        backgroundColor: ref.watch(isChandramProvider)
+            ? Colors.blue[500]
+            : Color.fromARGB(255, 255, 17, 0),
+        elevation: 0,
+        actions: [ThemeIconButton()],
+      ),
+      body: Body(),
+    );
   }
 }
