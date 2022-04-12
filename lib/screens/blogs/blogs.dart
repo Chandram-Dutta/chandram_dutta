@@ -52,7 +52,7 @@ class BlogsPage extends StatelessWidget {
                         ],
                       ),
                       onPressed: () {
-                        launchUrl("https://www.instagram.com/flutter.zed/");
+                        launchUrl("https://medium.com/@chandramdutta2004");
                       },
                     ),
                   ),
@@ -92,7 +92,7 @@ class BlogsPage extends StatelessWidget {
                         ],
                       ),
                       onPressed: () {
-                        launchUrl("https://www.instagram.com/flutter.zed/");
+                        launchUrl("https://chandramcodes.hashnode.dev/");
                       },
                     ),
                   ),
@@ -130,7 +130,7 @@ class BlogsPage extends StatelessWidget {
                         ],
                       ),
                       onPressed: () {
-                        launchUrl("https://www.instagram.com/flutter.zed/");
+                        launchUrl("https://dev.to/chandramdutta");
                       },
                     ),
                   ),
@@ -140,9 +140,24 @@ class BlogsPage extends StatelessWidget {
           ),
           Card(
             child: ListTile(
-              title: Text("Introduction to Riverpod"),
-              subtitle: Text("Medium"),
+              title: Text("Flutter Riverpod - Part 2"),
+              subtitle: Text("Hashnode"),
               trailing: Icon(Icons.arrow_forward_ios),
+              onTap: () {
+                launchUrl(
+                    "https://chandramcodes.hashnode.dev/flutter-riverpod-part-2");
+              },
+            ),
+          ),
+          Card(
+            child: ListTile(
+              title: Text("Hello Flutter with Riverpod 1.0.0!"),
+              subtitle: Text("Hashnode"),
+              trailing: Icon(Icons.arrow_forward_ios),
+              onTap: () {
+                launchUrl(
+                    "https://chandramcodes.hashnode.dev/hello-flutter-with-riverpod-100");
+              },
             ),
           ),
         ],
